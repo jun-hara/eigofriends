@@ -1,0 +1,24 @@
+<%= form_with model: user do |form| %>
+  <%= render "shared/errors", object: form.object %>
+  <div class="mb-3">
+    <%= form.label :username, class: "form-label"  %>
+    <%= form.text_field :username, class: "form-control", placeholder: "username" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :email, class: "form-label"  %>
+    <%= form.text_field :email, class: "form-control", placeholder: "email@site.com" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :password, class: "form-label"  %>
+    <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+    <i class="fa-solid fa-eye js-toggle-password"></i>
+  </div>
+  <div class="mb-3">
+    <%= form.label :password_confirmation, class: "form-label"  %>
+    <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
+    <i class="fa-solid fa-eye js-toggle-password"></i>
+  </div>
+  <div class="mb-3">
+    <%= form.submit "登録", class: "btn btn-dark" %>
+  </div>
+<% end %>

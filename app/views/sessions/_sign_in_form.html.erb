@@ -1,0 +1,17 @@
+<%= form_with url: sign_in_path do |form| %>
+  <div class="mb-3">
+    <%= form.label :email, class: "form-label" %>
+    <%= form.text_field :email, class: "form-control", placeholder: "email@site.com" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :password, class: "form-label" %>
+    <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+    <i class="fa-solid fa-eye js-toggle-password"></i>
+  </div>
+  <div class="mb-3">
+    <%= form.submit "ログイン", class: "btn btn-dark" %>
+  </div>
+  <div class="mb-3">
+    <%= link_to "パスワードを忘れた", password_reset_path %>
+  </div>
+<% end %>

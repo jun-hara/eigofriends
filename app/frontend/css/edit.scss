@@ -1,0 +1,30 @@
+.edit-main {
+  display: grid;
+  grid: 'edit-nav edit-forms preview' 1fr
+        / minmax(150px, 1fr) 5fr 8fr;
+  padding: 0 2% 2% 0;
+}
+
+#edit-nav {
+  grid-area: edit-nav;
+  padding-left: 1%;
+}
+
+#edit-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.edit-forms {
+  margin-left: 2%;
+  grid-area: edit-forms;
+}
+
+#lesson-preview {
+  grid-area: preview;
+}
+
+.crud-btn input[type="submit"] {
+  display: inline-block;
+  margin-right: 1%;
+}

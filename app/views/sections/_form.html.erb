@@ -1,0 +1,25 @@
+<%= form_with model: [lesson, section] do |form| %>
+  <div class="mb-3">
+    <%= form.label :header, class: "form-label" %>
+    <%= form.text_field :header, {class: "form-control", placeholder: "Section Header"} %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :content, class: "form-label" %>
+    <div class="rich-text-area rounded">
+      <%= form.rich_text_area :content %>
+    </div>
+  </div>
+  <div class="mb-3 crud-btn">
+    <%= form.button class: "btn btn-secondary rounded-circle", title: "Save section" do %>
+      <i class="fa-solid fa-floppy-disk"></i>
+    <% end %>
+    <% if section.persisted? %>
+      <%= link_to '<i class="fa-solid fa-trash-can"></i>'.html_safe,
+      lesson_section_path(lesson, section),
+      method: :delete,
+      data: { confirm: "Delete this section?" },
+      class: "btn btn-secondary crud-btn rounded-circle",
+      title: "Delete section" %>
+    <% end %>
+  </div>
+<% end %>

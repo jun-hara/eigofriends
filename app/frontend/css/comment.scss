@@ -1,0 +1,36 @@
+
+.comment {
+  padding: 5px;
+}
+
+.reply {
+  padding: 5px;
+  margin-left: 10%;
+}
+
+.comment > hr {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
+.comment > p {
+  margin-bottom: 8px;
+  color: #8CB4B3;
+  font-size: smaller;
+}
+
+.reply > hr,
+.reply > p {
+  margin-bottom: 8px;
+}
+
+.reply > p {
+  color: #8CB4B3;
+  font-size: smaller;
+}
+
+.nameplate {
+  color: #08908E;
+}

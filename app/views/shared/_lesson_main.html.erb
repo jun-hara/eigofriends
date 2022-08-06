@@ -1,0 +1,22 @@
+<section id="main">
+  <div class="container-fluid chalkboard">
+    <div id="lesson-main">
+      <div id="lesson-sidebar">
+        <p class="mb-2">Contents</p>
+        <ul>
+          <% @lesson.sections.each do |section| %>
+            <li class="mb-1">
+              <a class="section-link js-section-toggle" data-section-header="<%= section.header %>"><%= section.header %></a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div id="lesson-body">
+        <div class="mx-auto" id="lesson-title" >
+          <%= @lesson.title %>
+        </div>
+        <%= render @lesson.sections %>
+      </div>
+    </div>
+  </div>
+</section>

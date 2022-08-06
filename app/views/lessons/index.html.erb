@@ -1,0 +1,27 @@
+<section id="main">
+  <div class="container-fluid chalkboard">
+    <div id="lesson-index">
+      <h3>Lessons:</h3>
+      <ul class="list-group mt-2">
+        <% @lessons.each do |lesson| %>
+          <% if @user_is_teacher %>
+            <li class="list-group-item list-group-item-action lesson-list-row">
+              <%= link_to lesson.title, lesson_path(lesson), class: "btn" %>
+              <%= link_to '<i class="fa-solid fa-pencil"></i>'.html_safe , edit_lesson_path(lesson), class: "edit-lesson-link" %>
+            </li>
+          <% elsif lesson.visible? %>
+            <li class="list-group-item list-group-item-action lesson-list-row">
+              <%= link_to lesson.title, lesson_path(lesson), class: "btn" %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <br>
+      <span>
+        <% if @user_is_teacher %>
+          <%= link_to "New Lesson", new_lesson_path, class: "btn btn-light mb-3" %>
+        <% end %>
+      </span>
+    </div>
+  </div>
+</section>

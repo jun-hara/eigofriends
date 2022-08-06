@@ -1,0 +1,37 @@
+<%= form_with model: lesson do |form| %>
+  <div class="mb-3">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, {size: 35, class: "form-control", placeholder: "Episode Title"}  %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :season, class: "form-label" %>
+    <%= form.select :season,
+        [["1", 1],
+        ["2", 2],
+        ["3", 3],
+        ["4", 4],
+        ["5", 5],
+        ["6", 6],
+        ["7", 7],
+        ["8", 8],
+        ["9", 9],
+        ["10", 10]]%>
+  </div>
+  <div class="mb-3">
+    <%= form.label :status, class: "form-label" %>
+    <%= form.select :status, [["hidden", "hidden"], ["visible", "visible"]] %>
+  </div>
+  <div class="mb-3 crud-btn">
+    <%= form.button class: "btn btn-secondary rounded-circle", title: "Save lesson" do %>
+      <i class="fa-solid fa-floppy-disk"></i>
+    <% end %>
+    <% if lesson.persisted? %>
+      <%= link_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, 
+          lesson_path(lesson),
+          method: :delete,
+          data: { confirm: "All associated comments will be deleted. Delete lesson?" },
+          class: "btn btn-secondary rounded-circle",
+          title: "Delete" %>
+    <% end %>
+  </div>
+<% end %>

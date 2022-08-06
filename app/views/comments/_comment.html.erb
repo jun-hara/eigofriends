@@ -1,0 +1,10 @@
+<% if comment.valid?%>
+  <div class="comment mb-3 rounded">
+    <%= render "comments/show", comment: comment %>
+  </div>
+  <% comment.replies.each do |reply| %>
+    <div class="reply mb-3 rounded">
+      <%= render "comments/show", comment: reply %>
+    </div>
+  <% end %>
+<% end %>

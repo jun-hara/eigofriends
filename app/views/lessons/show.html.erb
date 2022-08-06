@@ -1,0 +1,18 @@
+<%= render "shared/lesson_main" %>
+<div class="container lesson-footer">
+  <h1>Comments</h1>
+  <% if Current.user %>
+    <%= render "comments/form", lesson: @lesson, comment: @lesson.comments.new, parent_id: nil %>
+  <% else %>
+    <p>
+      コメントをするには
+      <%= link_to "ログイン", sign_in_path %>
+      または
+      <%= link_to "新規登録", new_user_path %>
+      して下さい。
+    </p>
+  <% end %>
+  <% @comments.each do |comment| %>
+    <%= render "comments/comment", comment: comment %>
+  <% end %>
+</div>

@@ -1,0 +1,42 @@
+<section id="header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+      <%= image_tag "logo.png", id: "logo" %>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "レッスン", lessons_path, class: "nav-link" %>
+          </li>
+          <% if Current.user %>
+            <li class="nav-item dropdown me-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><%= Current.user.username %></a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <%= link_to "ダッシュボード", dashboard_path(Current.user), class: "dropdown-item" %>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <%= link_to "ログアウト", logout_path, class: "dropdown-item", method: :delete %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "ログイン", sign_in_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "新規登録", new_user_path, class: "nav-link" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>

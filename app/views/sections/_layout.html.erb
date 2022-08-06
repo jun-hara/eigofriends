@@ -1,0 +1,12 @@
+<div class="container-fluid edit-main">
+  <%= render "lessons/edit_nav" %>
+
+  <div class="edit-forms">
+    <h3><%= page_header %></h3>
+    <%= render "sections/form", lesson: @lesson, section: @section %>
+  </div>
+  
+  <div id="lesson-preview">
+    <%= render "shared/lesson_main" %>
+  </div>
+</div>

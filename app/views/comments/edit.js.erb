@@ -1,0 +1,4 @@
+$(".comment-parent-div").replaceWith("<%= j render "form", 
+                                        lesson: @lesson, 
+                                        comment: @comment, 
+                                        parent_id: @comment.parent_id %>")

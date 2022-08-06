@@ -1,0 +1,44 @@
+h1 {
+  text-align: start;
+}
+
+#logo {
+  height: 60px;
+  margin-left: 3%;
+}
+
+#flash-message {
+  margin-bottom: 50px;
+}
+
+.alert {
+  width: 40%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 7px;
+  text-align: center;
+  position: absolute;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 5%;
+}
+
+#footer > hr {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-content {
+  width: 50%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: start;
+}

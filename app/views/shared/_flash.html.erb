@@ -1,0 +1,16 @@
+<div id="flash-message">
+  <% if flash[:notice] %>
+    <div class="container-fluid alert-message">
+      <div class="alert alert-primary">
+        <%= flash[:notice] %>
+      </div>
+    </div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="container-fluid alert-message" >
+      <div class="alert alert-warning">
+        <%= flash[:alert] %>
+      </div>
+    </div>
+  <% end %>
+</div>

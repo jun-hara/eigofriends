@@ -1,0 +1,15 @@
+<div id="edit-nav">
+  <%= link_to "New Lesson", new_lesson_path() %> <br>
+  <%= link_to "Edit Lesson Top", edit_lesson_path(@lesson) %> <br>
+  <%= link_to "Add Section", new_lesson_section_path(@lesson) %> <br>
+  <br>
+  <span>Current Sections</span>
+  <ul>
+    <% @lesson.sections.each do |section| %>
+      <% if section.valid? %>
+        <li><%= link_to section.header, edit_lesson_section_path(@lesson, section) %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+

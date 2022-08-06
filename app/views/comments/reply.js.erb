@@ -1,0 +1,6 @@
+$("form").remove();
+$("#active-reply-btn").replaceWith("<%= j render "form",
+                                         lesson: @lesson,
+                                         comment: @lesson.comments.new,
+                                         parent_id: @comment.get_parent_comment_id %>");
+

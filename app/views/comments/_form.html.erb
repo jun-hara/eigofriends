@@ -1,0 +1,11 @@
+<%= form_with model: [ lesson, comment ] do |form| %>
+  <%= form.hidden_field :parent_id, value: parent_id %>
+  <div class="mb-3 rich-text-area rounded comments-section">
+    <%= form.rich_text_area :body %>
+  </div>
+  <div class="mb-3">
+    <%= form.button class: "btn btn-primary rounded-circle", title: "Comment" do %>
+      <i class="fa-solid fa-comment"></i>
+    <% end %>
+  </div>
+<% end %>

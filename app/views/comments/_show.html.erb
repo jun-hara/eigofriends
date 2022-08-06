@@ -1,0 +1,21 @@
+<span class="nameplate"><%= comment.get_username %> says:</span> 
+<div class="mb-2">
+  <%= comment.body %>
+</div>
+<hr class="opacity-10 bg-dark">
+<p>Posted on: <%= comment.created_at.strftime("%F") %></p>
+<% if comment.owned_by_current_user? %>
+  <%= button_to edit_lesson_comment_path(@lesson, comment),
+          remote: true,
+          method: :get,
+          class: "btn btn-secondary js-comment-btn mb-1 rounded-circle",
+          title: "Edit comment" do %>
+    <i class="fa-solid fa-pencil"></i>
+  <% end %>
+<% elsif Current.user %>
+  <%= link_to '<i class="fa-solid fa-reply"></i>'.html_safe, 
+          reply_path(@lesson, comment), 
+          remote: true, 
+          class: "btn btn-primary js-comment-btn rounded-circle",
+          title: "Reply to comment" %>
+<% end %>

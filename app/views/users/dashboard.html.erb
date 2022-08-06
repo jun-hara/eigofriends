@@ -1,0 +1,10 @@
+<div class="center-content">
+  <div class="center-content">
+    <h4>アカウント情報</h4>
+    <p>Username: <%= Current.user.username %></p>
+    <p>Email: <%= Current.user.email %></p>
+    <div class="mb-3">
+      <%= link_to "アカウント情報の変更", edit_user_path, class: "btn btn-light" %>
+    </div>
+  </div>
+</div>
