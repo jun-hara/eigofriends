@@ -16,7 +16,5 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "trix"
-import "@rails/actiontext"
-// require("trix")
-// require("@rails/actiontext")
+require("trix")
+require("@rails/actiontext")
