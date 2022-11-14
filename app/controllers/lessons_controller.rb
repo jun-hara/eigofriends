@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
   before_action :forbid_student_user, except: [:index, :show]
 
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.order(created_at: :asc).all
     
     if Current.user.nil?
       @user_is_teacher = false
