@@ -1,24 +1,20 @@
-# README
+#### アプリ名:
+Eigofriends
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### URL:
+https://eigofriends.herokuapp.com/
 
-Things you may want to cover:
+#### 使用技術
+- Ruby 3.0.1
+- Ruby on Rails 6.1.6
+- PostgreSQl 14.5
+- Puma
+- Bootstrap
+- jQuery
 
-* Ruby version
+#### 機能一覧
+- ユーザー登録・ログイン機能
+- パスワード暗号化(bcrypt)
+- レッスン作成・編集(ActionText)
+- コメント機能(ActionText)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
