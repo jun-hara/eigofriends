@@ -7,7 +7,7 @@ https://eigofriends.herokuapp.com/
 #### 使用技術
 - Ruby 3.0.1
 - Ruby on Rails 6.1.6
-- PostgreSQl 14.5
+- PostgreSQL 14.5
 - Puma
 - Bootstrap
 - jQuery
