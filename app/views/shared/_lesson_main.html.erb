@@ -4,7 +4,7 @@
       <div id="lesson-sidebar">
         <p class="mb-2">Contents</p>
         <ul>
-          <% @lesson.sections.each do |section| %>
+          <% @lesson.sections.sort_by(&:created_at).each do |section| %>
             <li class="mb-1">
               <a class="section-link js-section-toggle" data-section-header="<%= section.header %>"><%= section.header %></a>
             </li>
