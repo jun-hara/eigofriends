@@ -25,16 +25,17 @@ https://eigofriends.herokuapp.com/
 
 ログインしていない状態、または通常ユーザーは公開レッスンのみ閲覧可能です。
 
+#### レッスン閲覧画面
+
+![Screen Shot 2022-11-16 at 6 07 53](https://user-images.githubusercontent.com/26423484/202027807-f498c5cc-29ca-47c4-9fb1-9ad75a98d566.png)
+
+
 #### レッスン一覧画面（管理者）
 
 ![Screen Shot 2022-11-16 at 5 57 22](https://user-images.githubusercontent.com/26423484/202027774-cb4a026f-b46c-49d8-86a9-89916c207c8f.png)
 
 管理者は公開済レッスン及び未公開レッスンが閲覧可能です。鉛筆アイコンをクリックして編集画面へ遷移されます。
 
-
-#### レッスン閲覧画面
-
-![Screen Shot 2022-11-16 at 6 07 53](https://user-images.githubusercontent.com/26423484/202027807-f498c5cc-29ca-47c4-9fb1-9ad75a98d566.png)
 
 #### レッスン編集画面
 
