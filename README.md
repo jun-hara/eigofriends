@@ -1,6 +1,9 @@
 ### アプリ名:
 Eigofriends
 
+### 概要:
+「フレンズ」を観ながら英語を勉強するをテーマにした英語学習サイトです。
+
 ### URL:
 https://eigofriends.herokuapp.com/
 
