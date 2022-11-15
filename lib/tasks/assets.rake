@@ -1,6 +1,6 @@
 Rake::Task["assets:precompile"].clear
    namespace :assets do
      task 'precompile' do
-     puts "skipping precompile"
+     sh "NODE_OPTIONS=--openssl-legacy-provider rake webpacker:compile"
    end
 end
