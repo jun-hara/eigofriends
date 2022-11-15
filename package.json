@@ -1,9 +1,6 @@
 {
   "name": "eigofriends",
   "private": true,
-  "engine": {
-    "node": "16.x"
-  },
   "dependencies": {
     "@popperjs/core": "^2.6.0",
     "@rails/actioncable": "^6.0.0",
