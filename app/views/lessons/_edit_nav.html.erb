@@ -5,7 +5,7 @@
   <br>
   <span>Current Sections</span>
   <ul>
-    <% @lesson.sections.sort_by(&:created_at).each do |section| %>
+    <% @lesson.sections.each do |section| %>
       <% if section.valid? %>
         <li><%= link_to section.header, edit_lesson_section_path(@lesson, section) %></li>
       <% end %>
