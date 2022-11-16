@@ -7,4 +7,8 @@ class Lesson < ApplicationRecord
   def visible?
     return status === "visible"
   end
+  
+  def get_sections
+    return self.sections.select { |section| section.persisted? }
+  end
 end
