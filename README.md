@@ -21,6 +21,10 @@ https://eigofriends.herokuapp.com/
 - レッスン作成・編集(ActionText)
 - コメント機能(ActionText)
 
+### クラス図
+![Screen Shot 2022-11-24 at 23 05 00](https://user-images.githubusercontent.com/26423484/203804421-ec353791-079e-4d12-961f-e15348ab4db3.png)
+
+
 ### 画面サンプル
 #### レッスン一覧画面
 
